@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>community</title>
+	<title>community2</title>
 </head>
 <body>
 <h1>
