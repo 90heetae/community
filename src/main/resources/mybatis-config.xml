@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 해당페키지를 입력 ([mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Customer'. Cause: java.lang.ClassNotFoundException: Cannot find class: global.sesoc.web5.vo.Customer)-->
+	<typeAliases>
+		<typeAlias type="kr.co.community.vo.Customer" alias="Customer" />
+		<typeAlias type="kr.co.community.vo.Board" alias="Board" />
+		<typeAlias type="kr.co.community.vo.Reply" alias="Reply" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/customerMapper.xml" />
+		 <mapper resource="mapper/boardMapper.xml" /> 
+	</mappers>
+</configuration>
