@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>
-	여행동호회 
+	여행동호회
 </h1>
 
 <c:if test="${loginId != null }">

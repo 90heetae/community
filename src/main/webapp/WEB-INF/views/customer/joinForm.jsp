@@ -46,9 +46,59 @@ function formcheck(){
 	return true;
 }
 
+//ID 중복확인 창 열기
+function idcheckopen(){
+	window.open('idcheck', "newwin", "top=200, left=400, width=400, height=300, resizable=no");
+}
 </script>
 </head>
-<body>
 
+<body>
+<div class="centerdiv">
+<h1>[회원가입]</h1>
+<form id="joinform" action="join" method="post" onsubmit="return formCheck();">
+<table>
+	<tr>
+		<th>ID</th>
+		<td>
+			<input type="text" name="custid" id="custid" maxlength="10" placeholder="ID중복확인 이용" readonly="readonly" value="${customer.custid}"/>
+			<input type="button" value="ID중복확인" cnclick="idcheckOpen()">
+		</td>
+	</tr>
+	<tr>
+		<th>비밀번호</th>
+		<td><input type="password" name="password" id="password" placeholder="비밀번호 입력" value="${customer.password}"/><br>
+		<input type="password" id="password2" placeholder="비밀번호 다시 입력" value="${customer.password}"/></td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td><input type="text" name="name" id="name" placeholder="이름 입력" value="${customer.name}"/></td>	
+	</tr>
+	<tr>
+		<th>이메일</th>
+		<td><input type="text" name="email" id="email" placeholder="이메일 입력" value="${customer.email}"/></td>
+	</tr>
+	<tr>
+		<th>고객구분</th>
+		<td>
+			<input type="radio" name="division" value="personal" checked/>개인
+			<input type="radio" name="division" value="company"/>기업
+		</td>
+	</tr>
+	<tr>
+		<th>식별번호</th>
+		<td><input type="text" name="idno" placeholder="개인:주민번호 / 법인:사업자번호" value="${customer.idno}"/></td>
+	</tr>
+	<tr>
+		<th>주소</th>
+		<td><input type="text" name="adress" placeholder="주소 입력" value="${customer.address}" style="width:300px;"/></td>
+	</tr>
+</table>
+	<br>
+	<input type="submit" value="가입"/>
+	<input type="submit" vslue="다시 쓰기"/>
+	
+</form>
+</div>
 </body>
 </html>
